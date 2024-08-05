@@ -6,11 +6,14 @@
         1.2 Colours
         1.3 Typography
     2. Header
-       2.1 Menu 
-       2.2 Cart
-       2.3 Account
-       2.4 Search
-    3. Cart
+        2.1 Menu 
+        2.2 Cart
+        2.3 Account
+        2.4 Search
+    3. Mini Cart
+        3.1 Cart Items
+    4. Product Display Page (PDP)
+        4.1 Product Info
     10. Footer
     ========================================================================== */
 
@@ -43,6 +46,10 @@
         font-size: 1.1rem;
         letter-spacing: 0.15rem;
         text-transform: uppercase;
+    }
+
+    span.header__active-menu-item {
+        text-decoration: none;
     }
     
     a.header__menu-item span {
@@ -99,6 +106,52 @@
     }
     */
     
+/* ==========================================================================
+    3. Mini Cart
+    ========================================================================== */
+
+    /* 3.1 Cart Items
+    ========================================================================== */
+    cart-drawer table.cart-items thead {
+        display: none;
+    }
+
+    cart-drawer .cart-item__totals {
+        font-weight: 700;
+    }
+
+    /* 3.2 Qunatity Inputs
+    ========================================================================== */
+    cart-drawer .quantity {
+      font-weight: 700;
+      min-height: calc((var(--inputs-border-width) * 2) + 2.5rem);
+    }
+    cart-drawer .quantity::before, cart-drawer .quantity::after {
+        box-shadow: none;
+    }
+    cart-drawer cart-remove-button button svg {
+        margin: 0;
+    }
+    cart-drawer cart-remove-button button svg {
+        display: none;
+    }
+    cart-drawer cart-remove-button .button {
+        min-height: auto;
+    }
+    cart-drawer cart-remove-button .button::after {
+        color: #000;
+        content: 'remove';
+        display: flex;
+        font-weight: 700;
+    }
+
+/* ==========================================================================
+    4. Product Display Page (PDP)
+    ========================================================================== */
+
+    /* 3.1 Cart Items
+    ========================================================================== */
+
 
 /* ==========================================================================
     10. Footer
