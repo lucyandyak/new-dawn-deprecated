@@ -32,6 +32,26 @@ JS changes TBC
 
 Look at theme/layout.liquid (search __ly__extend) to see the included snippet
 
+## Merging in Dawn (public) updates
+
+If you would like to merge the latest Dawn updates into this theme then you should add the Dawn public repo like so to your remote:
+
+`git remote add dawn-public https://github.com/Shopify/dawn.git`
+
+Now checkout a new branch e,g, 
+
+`git checkout -b merge/dawn-2024-08-05`
+
+Now you may pull the latest updates from dawn public like so:
+
+`git pull dawn-public main`
+
+You may need to specifiy how Git handles merging in divergent branches e.g. to merge
+
+`git config pull.rebase false`
+
+Now fix any overwrites and clashes that may occur and now you can merge the merge/dawn-2024-08-05 into main.
+
 
 
 
