@@ -140,10 +140,19 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    }
+    },
+    "bae649c2-d1f6-4808-a690-e70160b87829": {
+      "type": "reviews",
+      "settings": {
+        "heading": "What Others Thought",
+        "padding_top": 30,
+        "padding_bottom": 30
+      }
+    },
   },
   "order": [
     "main",
-    "related-products"
+    "bae649c2-d1f6-4808-a690-e70160b87829"
+    "related-products",
   ]
 }
