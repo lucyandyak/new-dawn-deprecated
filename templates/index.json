@@ -32,177 +32,289 @@
         "show_text_below": false
       }
     },
-    "rich_text": {
-      "type": "rich-text",
+ "a15db892-021f-4de0-b741-6a9e725f321f": {
+      "type": "collection-mosaics",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "4578e215-1369-4a56-8399-a7aabd919bed": {
+          "type": "collection_tile",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "tile_url": "shopify:\/\/collections\/co-ords",
+            "tile_header": "Co-ords - 10% Off Sets!",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_114_21_05_2433708_0af23608-545e-4c6f-ab47-14d44c467c29.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
           }
         },
-        "text": {
-          "type": "text",
+        "ce07f994-ee13-4a73-8da3-a161dd3dbddf": {
+          "type": "collection_tile",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "tile_url": "shopify:\/\/collections\/jumpsuits-boilersuits",
+            "tile_header": "Playsuits",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_114_21_05_2433206.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "fbe22cda-cfae-41b6-82be-7e129456108c": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/collections\/the-icons",
+            "tile_header": "Icons",
+            "tile_image": "shopify:\/\/shop_images\/6D2BD3E3-D3B2-40B6-845B-519CB721AF1E2_1.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "3fc5089f-479c-4604-97e7-d84c1cf133ad": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/collections\/all-dresses-skirts",
+            "tile_header": "Dresses & Skirts",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_108_19_03_2420510_5c04992e-ca87-482d-a62c-edf6d5bb958a.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "template--14591004344423__a15db892-021f-4de0-b741-6a9e725f321f-1677689184d1e54528-0": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/collections\/buy-1-get-1-half-price",
+            "tile_header": "Buy 1, Get 1 Half Price",
+            "tile_image": "shopify:\/\/shop_images\/DYLAN_YAKPAK_SUNFLOWER_1a63184e-54ee-4fce-b01d-0cf80604a456.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "40f334d0-fd6f-471e-a461-2ac344f41ecb": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/collections\/petite",
+            "tile_header": "Petite Sizing",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_103_22_01_249456_c72d4e0d-9524-465c-84ff-f650e967ec15.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "c768178b-695d-40bb-b6fc-7e37d539fe89": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/collections\/tall-range",
+            "tile_header": "Tall Sizing",
+            "tile_image": "shopify:\/\/shop_images\/LYAW23_Ecom77347.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "template--14591004344423__a15db892-021f-4de0-b741-6a9e725f321f-1677689184d1e54528-1": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/collections\/bags-purses",
+            "tile_header": "Bags",
+            "tile_image": "shopify:\/\/shop_images\/LucyandYak_PalmSprings_byArianaDixon258.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
           }
         }
       },
       "block_order": [
-        "heading",
-        "text"
+        "4578e215-1369-4a56-8399-a7aabd919bed",
+        "ce07f994-ee13-4a73-8da3-a161dd3dbddf",
+        "fbe22cda-cfae-41b6-82be-7e129456108c",
+        "3fc5089f-479c-4604-97e7-d84c1cf133ad",
+        "template--14591004344423__a15db892-021f-4de0-b741-6a9e725f321f-1677689184d1e54528-0",
+        "40f334d0-fd6f-471e-a461-2ac344f41ecb",
+        "c768178b-695d-40bb-b6fc-7e37d539fe89",
+        "template--14591004344423__a15db892-021f-4de0-b741-6a9e725f321f-1677689184d1e54528-1"
+      ],
+      "custom_css": [
+        ".blog__posts.articles-wrapper {margin-bottom: 0 !important;}",
+        ".collection-mosaic__tile {padding-bottom: 0px;}",
+        ".slider-mobile-gutter {margin-top: -20px;}"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-1",
-        "full_width": true,
-        "padding_top": 40,
+        "layout": "1-1-1-1",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
+    "14e67b39-76f2-4570-b04d-d8a14472143e": {
+      "type": "collection-mosaics",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "template--14591004344423__14e67b39-76f2-4570-b04d-d8a14472143e-16775940831cf0a436-1": {
+          "type": "collection_tile",
           "settings": {
-            "collection": ""
+            "tile_url": "shopify:\/\/collections\/new-in",
+            "tile_header": "Latest Drops",
+            "tile_image": "shopify:\/\/shop_images\/Latest-Drops-Bowie-Nevada.jpg",
+            "image_position": "top",
+            "button_text": "New Arrivals for Your Adventures",
+            "hide_button_text": false
           }
         },
-        "product": {
-          "type": "product",
+        "template--14591004344423__14e67b39-76f2-4570-b04d-d8a14472143e-16775940831cf0a436-0": {
+          "type": "collection_tile",
           "settings": {
-            "product": "",
-            "second_image": false
+            "tile_url": "shopify:\/\/collections\/the-icons",
+            "tile_header": "The Icons",
+            "tile_image": "shopify:\/\/shop_images\/LEO_SUN_1.jpg",
+            "image_position": "top",
+            "button_text": "Stand Out With Signature Prints",
+            "hide_button_text": false
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "template--14591004344423__14e67b39-76f2-4570-b04d-d8a14472143e-16775940831cf0a436-2": {
+          "type": "collection_tile",
           "settings": {
-            "collection": ""
+            "tile_url": "shopify:\/\/collections\/jumpsuits-boilersuits",
+            "tile_header": "Jumpsuits",
+            "tile_image": "shopify:\/\/shop_images\/Collection-WK1-Jumpsuits.jpg",
+            "image_position": "top",
+            "button_text": "Designed For Movement, Made For You",
+            "hide_button_text": false
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "template--14591004344423__14e67b39-76f2-4570-b04d-d8a14472143e-16775940831cf0a436-1",
+        "template--14591004344423__14e67b39-76f2-4570-b04d-d8a14472143e-16775940831cf0a436-0",
+        "template--14591004344423__14e67b39-76f2-4570-b04d-d8a14472143e-16775940831cf0a436-2"
+      ],
+      "custom_css": [
+        ".collection-mosaic__tile-text h4 {margin-bottom: -5px;}"
       ],
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "card_styles": "product-card-wrapper",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "layout": "2-1-1",
+        "padding_top": 20,
+        "padding_bottom": 10
       }
     },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "enable_video_looping": false,
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
+    "36fe5e14-85c0-4fc4-a51c-e303773159a7": {
+      "type": "collection-mosaics",
       "blocks": {
-        "column1": {
-          "type": "column",
+        "template--14591004344423__36fe5e14-85c0-4fc4-a51c-e303773159a7-1677683640dd12fbeb-0": {
+          "type": "collection_tile",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "tile_url": "shopify:\/\/products\/original-dungaree-organic-twill-onda-oranges",
+            "tile_header": "Original Dungaree - Onda Oranges",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_114_21_05_2432283_1.jpg",
+            "image_position": "top",
+            "button_text": "Shop Now",
+            "hide_button_text": false
           }
         },
-        "column2": {
-          "type": "column",
+        "212a5b4a-e11d-45dc-ab37-caf4c642c0a0": {
+          "type": "collection_tile",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "tile_url": "shopify:\/\/products\/brodie-bumbag-organic-twill-black",
+            "tile_header": "Brodie Bumbag - Black",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_82_08_03_238470.jpg",
+            "image_position": "top",
+            "button_text": "Shop Now",
+            "hide_button_text": false
           }
         },
-        "column3": {
-          "type": "column",
+        "017e0a0f-0aa3-4f9d-9060-23b8bc95f31b": {
+          "type": "collection_tile",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
+            "tile_url": "shopify:\/\/products\/mable-maxi-dress-tencel-lyocell-black",
+            "tile_header": "Mable Maxi Dress - Leo",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_114_21_05_2432840_1.jpg",
+            "image_position": "top",
+            "button_text": "Shop Now",
+            "hide_button_text": false
+          }
+        },
+        "template--14591004344423__36fe5e14-85c0-4fc4-a51c-e303773159a7-1677683640dd12fbeb-2": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/products\/l-e-resort-shirt-lenzing-ecovero-camara-crochet",
+            "tile_header": "Santiago Shirt - Camara",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_112_25_04_2430604_5b652af6-bed3-4218-92d3-41f598fae23c.jpg",
+            "image_position": "top",
+            "button_text": "Shop Now",
+            "hide_button_text": false
+          }
+        },
+        "template--14591004344423__36fe5e14-85c0-4fc4-a51c-e303773159a7-1677683640dd12fbeb-1": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/products\/lexi-shorts-organic-denim-washed-black",
+            "tile_header": "Lexi Shorts - Washed Black",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_103a_23_01_2411741_78a0d844-0c9a-4287-9284-2615a1fbcf7d.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "2257e168-3d00-4e91-ac19-98bd7014e5e7": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/products\/alexa-trousers-organic-cotton-sunflower-print",
+            "tile_header": "Alexa Trousers - Sunflower Print",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_104_08_02_2414053_5824e4ef-5954-4b21-b952-3f6bc1c1323c.jpg",
+            "image_position": "top",
+            "button_text": "Shop Now",
+            "hide_button_text": false
+          }
+        },
+        "collection_tile_MRTRwf": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/products\/original-dungaree-shorts-organic-cotton-linen-cupid",
+            "tile_header": "Original Dungaree Shorts - Cupid",
+            "tile_image": "shopify:\/\/shop_images\/Lucy___Yak_110_18_04_2427836_654a727e-6646-4c05-92d1-10710c36017b.jpg",
+            "image_position": "top",
+            "button_text": "",
+            "hide_button_text": false
+          }
+        },
+        "7b00c83c-b3c0-4309-90a2-0b3ef3fff484": {
+          "type": "collection_tile",
+          "settings": {
+            "tile_url": "shopify:\/\/products\/brady-organic-cotton-corduroy-cross-body-bag-in-black",
+            "tile_header": "Brady Bag - Black",
+            "tile_image": "shopify:\/\/shop_images\/SS23_BRADY_BAG_BLACK_2.jpg",
+            "image_position": "top",
+            "button_text": "Shop Now",
+            "hide_button_text": false
           }
         }
       },
       "block_order": [
-        "column1",
-        "column2",
-        "column3"
+        "template--14591004344423__36fe5e14-85c0-4fc4-a51c-e303773159a7-1677683640dd12fbeb-0",
+        "212a5b4a-e11d-45dc-ab37-caf4c642c0a0",
+        "017e0a0f-0aa3-4f9d-9060-23b8bc95f31b",
+        "template--14591004344423__36fe5e14-85c0-4fc4-a51c-e303773159a7-1677683640dd12fbeb-2",
+        "template--14591004344423__36fe5e14-85c0-4fc4-a51c-e303773159a7-1677683640dd12fbeb-1",
+        "2257e168-3d00-4e91-ac19-98bd7014e5e7",
+        "collection_tile_MRTRwf",
+        "7b00c83c-b3c0-4309-90a2-0b3ef3fff484"
+      ],
+      "custom_css": [
+        ".blog__posts.articles-wrapper {margin-bottom: 0 !important;}",
+        ".collection-mosaic__tile {padding-bottom: 0px;}",
+        ".mobile-mosaic-div h4 {margin-bottom: -5px;}",
+        ".slider-mobile-gutter {margin-top: -20px; margin-bottom: -2px;}"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "layout": "1-1-1-1",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
     "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "a15db892-021f-4de0-b741-6a9e725f321f",
+    "14e67b39-76f2-4570-b04d-d8a14472143e",
+    "36fe5e14-85c0-4fc4-a51c-e303773159a7"
   ]
 }
