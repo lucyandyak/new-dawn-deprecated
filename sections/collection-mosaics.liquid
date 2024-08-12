@@ -1,0 +1,328 @@
+{{ 'splide.min.css' | asset_url | stylesheet_tag }}
+{{ 'splide.min.js' | asset_url | script_tag }}
+{{ 'section-collection-mosaic.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+  <div class="collection-mosaic-wrapper isolate no-heading section-{{ section.id }}-padding">
+
+        {% if section.settings.layout == "2-1-1" %}
+          <div class="page-width-new">
+          <div class="collection-mosaic__layout-2-1-1">
+
+            <div class="collection-mosaic__big-tile">
+              <div class="collection-mosaic__tile">
+                {% render 'mosaic-card', block: section.blocks[0], use_img_tag: true, max_img_width: 1600 %}
+              </div>
+            </div>
+
+            <div class="collection-mosaic__small-tiles">
+              <div class="collection-mosaic__tile">
+                {% render 'mosaic-card', block: section.blocks[1], use_img_tag: false, max_img_width: 800 %}
+              </div>
+              <div class="collection-mosaic__tile">
+                {% render 'mosaic-card', block: section.blocks[2], use_img_tag: false, max_img_width: 800 %}
+              </div>
+            </div>
+            
+          </div>
+          </div>
+        {% elsif section.settings.layout == "1-1-2" %}
+          <div class="page-width-new">
+          <div class="collection-mosaic__layout-1-1-2">
+
+            <div class="collection-mosaic__small-tiles">
+              <div class="collection-mosaic__tile">
+                {% render 'mosaic-card', block: section.blocks[1], max_img_width: 800 %}
+              </div>
+              <div class="collection-mosaic__tile">
+                {% render 'mosaic-card', block: section.blocks[2], max_img_width: 800 %}
+              </div>
+            </div>
+
+            <div class="collection-mosaic__big-tile">
+              <div class="collection-mosaic__tile">
+                {% render 'mosaic-card', block: section.blocks[0], use_img_tag: true, max_img_width: 1600 %}
+              </div>
+            </div>
+            
+          </div>
+          </div>
+        {% elsif section.settings.layout == "1-1-1-1" %}
+          <div class="collection-mosaic__layout-1-1-1-1 splide collection-mosaic-splide-{{ section.id }} hide-mobile">
+
+            <div class="splide__track">
+            <ul class="collection-mosaic__tiles splide__list">
+            {% for block in section.blocks %}
+              <li class="collection-mosaic__tile splide__slide">
+                {% render 'mosaic-card', block: block, img_width: 481, img_height: 958, crop_args: 'center', use_img_tag: true, max_img_width: 400 %}
+              </li>
+            {% endfor %}
+            </ul>
+            </div>
+            
+          </div>
+
+          <div class="mobile-only">
+            <slider-component class="slider-mobile-gutter">
+              <ul id="Slider-{{ section.id }}"
+                class="mobile-mosaic-ul blog__posts articles-wrapper contains-card{% if settings.card_style == 'standard' %} contains-card--standard{% endif %} grid grid--peek grid--3-col-tablet grid--3-col-desktop slider mosaic-slider--mobile mobile-mosaic"
+                  role="list"
+              >
+                {% for block in section.blocks %}
+
+                  {%- assign product_handle = block.settings.tile_url %}
+
+                  {% if product_handle contains '/products/' %}
+                    {%- assign set_product = block.settings.tile_url | split: "/" | last %}
+                    {% assign product = all_products[set_product] %}
+                  {% endif %}
+
+                  <li class="collection-mosaic__tile splide__slide juice1 mobile-mosaic-li">
+                    <a href="{{ block.settings.tile_url }}">
+                      <img
+                        class="mobile-mosaic-img motion-reduce"
+                        srcset="{%- if block.settings.tile_image.width >= 165 -%}{{ block.settings.tile_image | image_url: width: 165 }} 165w,{%- endif -%}
+                        {%- if block.settings.tile_image.width >= 330 -%}{{ block.settings.tile_image | image_url: width: 330 }} 330w,{%- endif -%}"
+                      src="{{ block.settings.tile_image | image_url: width: 800 }}"
+                      sizes="(max-width: 165px) 165px,
+                      (max-width: 330px) 330px,
+                      800px,"
+                        alt="{{ block.settings.tile_header | escape }}"
+                        width="800"
+                        height="{{ 800 | divided_by: block.settings.tile_image.aspect_ratio | round }}px"
+                        loading="lazy"
+                      >
+                      <div class="mobile-mosaic-div">
+                        {% if product_handle contains '/products/' %}
+                          <h4>{{ block.settings.tile_header }}</h4>
+                          {%- if block.settings.tile_url != blank -%}
+                            <a href="{{ block.settings.tile_url }}" class="">{{ product.price | money | replace: 'GBP', '' | replace: 'USD', '' | replace: 'EUR', ''}}</a>
+                          {%- endif -%}
+                        {% else %}
+                          <h4>{{ block.settings.tile_header }}</h4>
+                          {%- if block.settings.tile_url != blank -%}
+                            <a href="{{ block.settings.tile_url }}" class="">{{ block.settings.button_text | escape }}</a>
+                          {%- endif -%}
+                        {% endif %}
+                      </div>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </slider-component>
+          </div>
+
+          <script>
+            document.addEventListener( 'DOMContentLoaded', function () {
+              {% comment %}
+                we have to introduce a very slight delay otherwise initial slide position is not calculated correctly 1005 of the time.
+              {% endcomment %}
+                setTimeout( function(){
+                var splide = new Splide( '.collection-mosaic-splide-{{ section.id }}', {
+                  type: "loop",
+                  gap: 10,
+                  rewind : false,
+                  snap: true,
+                  //fixedHeight : '700px',
+                  //autoWidth: true,
+                  //autoHeight: true,
+                  perPage: 5.5, 
+                  perMove: 1,
+                  pagination: false,
+                  breakpoints: {
+                    480: {
+                      //fixedHeight : '320px',
+                      perPage: 1.75, 
+                      arrows: false,
+                    },
+                    640: {
+                      //fixedHeight : '400px',
+                      perPage: 2.5, 
+                      arrows: false,
+                    },
+                    750: {
+                      //fixedHeight : '400px',
+                      perPage: 3.25, 
+                      arrows: false,
+                    },
+                    850: {
+                      //fixedHeight : '400px',
+                      perPage: 3.5, 
+                      arrows: false,
+                    },
+                    1000: {
+                      //fixedHeight : '500px',
+                      perPage: 3.5, 
+                      arrows: true,
+                    },
+                    1100: {
+                      //fixedHeight : '600px',
+                      perPage: 4.25, 
+                      arrows: true,
+                    },
+                    1200: {
+                      //fixedHeight : '600px',
+                      perPage: 4.5, 
+                      arrows: true,
+                    },
+                    1600: {
+                      //fixedHeight : '600px',
+                      perPage: 5.5, 
+                      arrows: true,
+                    },
+                  },
+                } );
+
+                splide.mount();
+              }, 1000);
+
+            });
+          </script>
+
+        {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "Collection Mosaic",
+  "tag": "section",
+  "class": "section section-collection-mosaics",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "default": "2-1-1",
+      "options": [
+        {
+          "value" : "2-1-1",
+          "label":"2:1:1 - Big Left / 2 Small right"
+        },
+        {
+          "value" : "1-1-2",
+          "label":"1:1:2 - 2 Small Left / Big Right"
+        },
+        {
+          "value" : "1-1-1-1",
+          "label":"1:1:1:1 - All in a row"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 30
+    }
+  ],
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "collection_tile",
+      "name": "t:sections.collection-tiles.blocks.collection_tile.name",
+      "settings": [
+        {
+          "type": "url",
+          "id": "tile_url",
+          "label": "t:sections.collection-tiles.blocks.collection_tile.settings.tile_url.label"
+        },
+        {
+          "type": "text",
+          "id": "tile_header",
+          "label": "t:sections.collection-tiles.blocks.collection_tile.settings.tile_header.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "tile_image",
+          "label": "t:sections.collection-tiles.blocks.collection_tile.settings.tile_image.label"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "options": [
+            {
+              "value": "top",
+              "label": "Top (default)"
+            },
+            {
+              "value": "centre",
+              "label": "Centre"
+            },
+            {
+              "value": "bottom",
+              "label": "Bottom"
+            }
+          ],
+          "default": "top",
+          "label": "Image position",
+          "info": "Control how the image is positioned on screen resizing."
+        },
+        {
+          "type": "video",
+          "id": "tile_video",
+          "label": "Use video for this tile"
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "t:sections.collection-tiles.blocks.collection_tile.settings.button_text.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "hide_button_text",
+          "label": "Hide button label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Mosaic",
+      "blocks": [
+        {
+          "type": "collection_tile"
+        },
+        {
+          "type": "collection_tile"
+        },
+        {
+          "type": "collection_tile"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

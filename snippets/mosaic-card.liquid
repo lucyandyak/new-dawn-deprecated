@@ -1,0 +1,78 @@
+{%- if block.settings.tile_url != blank -%}
+  <a href="{{ block.settings.tile_url }}" class="collection-mosaic__tile-link"></a>
+{%- endif -%}
+{%- assign product_handle = block.settings.tile_url %}
+
+{% if product_handle contains '/products/' %}
+  {%- assign set_product = block.settings.tile_url | split: "/" | last %}
+  {% assign product = all_products[set_product] %}
+{% endif %}
+
+{% if use_img_tag %}
+  {% if block.settings.tile_video %}
+    {{ block.settings.tile_video | video_tag }}
+  {% else %}
+      <img
+        srcset="{%- if block.settings.tile_image.width >= 165 -%}{{ block.settings.tile_image | image_url: width: 165 }} 165w,{%- endif -%}
+          {%- if block.settings.tile_image.width >= 330 -%}{{ block.settings.tile_image | image_url: width: 330 }} 330w,{%- endif -%}
+          {%- if block.settings.tile_image.width >= 535 -%}{{ block.settings.tile_image | image_url: width: 535 }} 535w,{%- endif -%}
+        {% if max_img_width %}{{ block.settings.tile_image | image_url: width: max_img_width }} 800w{% else %}{{ block.settings.tile_image | image_url: width: 1600 }} 800w{% endif %}"
+        src="{{ block.settings.tile_image | image_url: width: 800 }}"
+        sizes="(max-width: 165px) 165px,
+        (max-width: 330px) 330px,
+        (max-width: 535px) 535px,
+        800px,
+        "
+        alt="{{ block.settings.tile_header | escape }}"
+        width="800"
+        height="{{ 800 | divided_by: block.settings.tile_image.aspect_ratio | round }}px"
+        loading="lazy"
+        class="motion-reduce"
+      >
+  {% endif %}
+{% else %} 
+  {% if block.settings.tile_video %}
+    {{ block.settings.tile_video | video_tag: loop: true, autoplay: true, muted: true  }}
+  {% else %}
+    {% if img_width and img_height and crop_args %}
+      <div
+        class="collection-mosaic__tile-image"
+        style="background-image: url('{{ block.settings.tile_image | image_url: width: img_width, height: img_height, crop: crop_args }}');"
+      >
+      </div>
+    {% elsif crop_args %}
+      <div
+        class="collection-mosaic__tile-image"
+        style="background-image: url('{{ block.settings.tile_image | image_url: crop: crop_args }}');"
+      >
+      </div>
+    {% elsif img_width and img_height %}
+      <div
+        class="collection-mosaic__tile-image"
+        style="background-image: url('{{ block.settings.tile_image | image_url: width: img_width, height: img_height }}');"
+      >
+      </div>
+    {% else %}
+      <div
+        class="collection-mosaic__tile-image collection-mosaic__tile-image-align-{{ block.settings.image_position }}"
+        style="background-image: url('{{ block.settings.tile_image | image_url: width: 1600 }}');"
+      >
+      </div>
+    {% endif %}
+  {% endif %}
+{% endif %}
+<div
+    class="collection-mosaic__tile-text {% if block.settings.hide_button_text %} collection-mosaic__tile-text-hidden{% endif %}"
+>
+  {% if product_handle contains '/products/' %}
+    <h4>{{ block.settings.tile_header }}</h4>
+    {%- if block.settings.tile_url != blank -%}
+      <a href="{{ block.settings.tile_url }}" class="">{{ product.price | money | replace: 'GBP', '' | replace: 'USD', '' | replace: 'EUR', ''}}</a>
+    {%- endif -%}
+  {% else %}
+    <h4>{{ block.settings.tile_header }}</h4>
+    {%- if block.settings.tile_url != blank -%}
+      <a href="{{ block.settings.tile_url }}" class="">{{ block.settings.button_text | escape }}</a>
+    {%- endif -%}
+  {% endif %}
+</div>

@@ -2,26 +2,10 @@
   "sections": {
     "image_banner": {
       "type": "image-banner",
-      "blocks": {
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "button"
-      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/191x12nd.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "adapt",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
@@ -32,7 +16,30 @@
         "show_text_below": false
       }
     },
- "a15db892-021f-4de0-b741-6a9e725f321f": {
+    "rich_text_RbYVKg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wHHD6k": {
+          "type": "heading",
+          "settings": {
+            "heading": "Chase the Sun in Comfort",
+            "heading_size": "h2"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wHHD6k"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 20
+      }
+    },
+    "a15db892-021f-4de0-b741-6a9e725f321f": {
       "type": "collection-mosaics",
       "blocks": {
         "4578e215-1369-4a56-8399-a7aabd919bed": {
@@ -309,12 +316,88 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "slideshow_8FH6QL": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_GQWa7k": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Copy_of_Indie-Biz-Homepage_1_43e96f87-d3fc-4211-972f-0fd246f7d2be.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_9Wkard": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/GET-TO-KNOW-OUR-FABRICS.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_pFgAiy": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/reyak_banner_39ed2dbb-5f6e-4989-8ba2-d6ee59a0b252.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_GQWa7k",
+        "slide_9Wkard",
+        "slide_pFgAiy"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "dots",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
     }
   },
   "order": [
     "image_banner",
+    "rich_text_RbYVKg",
     "a15db892-021f-4de0-b741-6a9e725f321f",
     "14e67b39-76f2-4570-b04d-d8a14472143e",
-    "36fe5e14-85c0-4fc4-a51c-e303773159a7"
+    "36fe5e14-85c0-4fc4-a51c-e303773159a7",
+    "slideshow_8FH6QL"
   ]
 }
