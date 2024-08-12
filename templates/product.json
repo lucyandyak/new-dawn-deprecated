@@ -3,6 +3,12 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": ""
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -40,7 +46,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
@@ -84,15 +90,10 @@
             "content": "",
             "page": ""
           }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
         }
       },
       "block_order": [
+        "share",
         "title",
         "caption",
         "price",
@@ -104,8 +105,7 @@
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": true,
