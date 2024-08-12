@@ -212,6 +212,26 @@
         padding-right: 20px;
     }
 
+    /* 5.3 Product Cards
+    ========================================================================== */
+
+    /* 5.4 Quick Add
+    ========================================================================== */
+    .collection .card__content {
+        position: relative;
+    }
+    .collection .quick-add {
+        display: none;
+        position: absolute;
+        grid-row-start: auto;
+        top: -56px;
+        left: 10px;
+        width: calc(100% - 20px);
+    }
+    .collection .card:hover .quick-add {
+        display: block;
+    }
+
 
 /* ==========================================================================
     10. Footer
